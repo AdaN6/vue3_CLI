@@ -1,26 +1,28 @@
 <template>
  <h1> {{title}} </h1>
- <input type="text" ref="name">
- <button @click="handleClick">Click me</button>
-
+ <!-- <input type="text" ref="name">
+ <button @click="handleClick">Click me</button> -->
+<Modal />
 </template>
 
 <script>
+import Modal from './components/Modal.vue'
 
 export default {
+  components: { Modal },
   name: 'App',
   data() {
     return {
       title: ' Hey Ho World Vue App :)'
     }
   },
-  methods: {
-    handleClick() {
-      console.log(this.$refs.name)
-      this.$refs.name.classList.add('active')
-      this.$refs.name.focus()
-    }
-  }
+  // methods: {
+  //   handleClick() {
+  //     console.log(this.$refs.name)
+  //     this.$refs.name.classList.add('active')
+  //     this.$refs.name.focus()
+  //   }
+  // }
 }
 </script>
 
