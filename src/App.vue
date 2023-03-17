@@ -2,7 +2,7 @@
  <h1> {{title}} </h1>
  <!-- <input type="text" ref="name">
  <button @click="handleClick">Click me</button> -->
-<Modal header="Sign up for more NEWS!" text="Grab a kimbab for free!"/>
+<Modal :header="header" :text="text" theme="sale" />
 </template>
 
 <script>
@@ -13,7 +13,9 @@ export default {
   name: 'App',
   data() {
     return {
-      title: ' Hey Ho World Vue App :)'
+      title: ' Hey Ho World Vue App :)',
+      header: 'Sign up for more NEWS!',
+      text: 'Grab a kimbab for free!'
     }
   },
   // methods: {
