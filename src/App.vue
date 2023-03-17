@@ -2,7 +2,7 @@
  <h1> {{title}} </h1>
  <!-- <input type="text" ref="name">
  <button @click="handleClick">Click me</button> -->
-<Modal />
+<Modal header="Sign up for more NEWS!" text="Grab a kimbab for free!"/>
 </template>
 
 <script>
