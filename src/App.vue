@@ -1,8 +1,12 @@
 <template>
  <h1> {{title}} </h1>
+ <p> Welcome! </p>
  <!-- <input type="text" ref="name">
  <button @click="handleClick">Click me</button> -->
-<Modal :header="header" :text="text" theme="sale" />
+ <div v-if="showModal">
+  <Modal :header="header" :text="text" theme="sale" />
+</div>
+<button @click="toggleModal"> Open Modal </button>
 </template>
 
 <script>
@@ -15,16 +19,22 @@ export default {
     return {
       title: ' Hey Ho World Vue App :)',
       header: 'Sign up for more NEWS!',
-      text: 'Grab a kimbab for free!'
+      text: 'Grab a kimbab for free!',
+      showModal: false
     }
   },
-  // methods: {
-  //   handleClick() {
-  //     console.log(this.$refs.name)
-  //     this.$refs.name.classList.add('active')
-  //     this.$refs.name.focus()
-  //   }
-  // }
+  methods: {
+    // handleClick() {
+    //   console.log(this.$refs.name)
+    //   this.$refs.name.classList.add('active')
+    //   this.$refs.name.focus()
+    // },
+      toggleModal() {
+        this.showModal = !this.showModal
+      }
+  }
+
+
 }
 </script>
 
