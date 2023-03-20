@@ -3,7 +3,7 @@
  <p> Welcome! </p>
  <!-- <input type="text" ref="name">
  <button @click="handleClick">Click me</button> -->
- <div v-if="showModal">
+ <teleport to=".modals" v-if="showModal">
   <Modal theme="sale" @close="toggleModal">
     <template v-slot:links>
       <a class="link" href="#">sign up now</a>
@@ -12,7 +12,7 @@
     <h1>Hot Giveaway!</h1>
     <p>Grab your schawarma for half price!</p>
   </Modal> 
-</div>
+</teleport>
 
 <div v-if="showModal2">
   <Modal @close="toggleModal2">
@@ -58,7 +58,7 @@ export default {
 </script>
 
 <style>
-#app {
+#app, .modals{
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
