@@ -11,10 +11,19 @@
     </template>
     <h1>Hot Giveaway!</h1>
     <p>Grab your schawarma for half price!</p>
-
   </Modal> 
 </div>
+
+<div v-if="showModal2">
+  <Modal @close="toggleModal2">
+    <h1>Hot Giveaway 2!</h1>
+    <p>Grab your falafel for half price!</p>
+  </Modal>
+</div>
+
 <button @click="toggleModal"> Open Modal </button>
+<br>
+<button @click="toggleModal2"> Open Modal 2 </button>
 </template>
 
 <script>
@@ -26,9 +35,8 @@ export default {
   data() {
     return {
       title: ' Hey Ho World Vue App :)',
-      header: 'Sign up for more NEWS!',
-      text: 'Grab a kimbab for free!',
-      showModal: false
+      showModal: false,
+      showModal2: false,
     }
   },
   methods: {
@@ -39,6 +47,9 @@ export default {
     // },
       toggleModal() {
         this.showModal = !this.showModal
+      },
+      toggleModal2() {
+        this.showModal2= !this.showModal2
       }
   }
 
