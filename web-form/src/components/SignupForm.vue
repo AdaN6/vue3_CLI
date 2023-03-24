@@ -1,15 +1,17 @@
 <template>
-    <form>
-        <label>Email:</label>
-        <input type="email" required v-modal="email">
 
-        <label>Password:</label>
-        <input type="password" required v-modal="password">
-    </form>
+        <form>
+            <label>Email:</label>
+            <input type="email"  v-model="email" required>
 
-    <p> email: {{email}} </p>
-    <p> password: {{password}} </p>
-    
+            <label>Password:</label>
+            <input type="password" v-model="password" required >
+        </form>
+
+        <p> email: {{email}} </p>
+        <p> password: {{password}} </p>
+
+
 </template>
 
 <script>
