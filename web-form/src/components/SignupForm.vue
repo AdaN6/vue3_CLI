@@ -18,18 +18,22 @@
                 <label>Accept terms and conditions</label>
             </div>
 
-            <div>
-                <input type="checkbox" value="Mike" v-model="names">
-                <label>Mike</label>
-            </div>
-            <div>
-                <input type="checkbox" value="Eddie" v-model="names">
-                <label>Eddie</label>
-            </div>
-            <div>
-                <input type="checkbox" value="Tom" v-model="names">
-                <label>Tom</label>
-            </div>
+            <!-- example of using multiple same v-model  -->
+
+                <!-- <div>
+                    <input type="checkbox" value="Mike" v-model="names">
+                    <label>Mike</label>
+                </div>
+                <div>
+                    <input type="checkbox" value="Eddie" v-model="names">
+                    <label>Eddie</label>
+                </div>
+                <div>
+                    <input type="checkbox" value="Tom" v-model="names">
+                    <label>Tom</label>
+                </div> -->
+
+            <!--  -->
 
         </form>
 
@@ -37,7 +41,7 @@
         <p> password: {{password}} </p>
         <p>role: {{role}} </p>
         <p> Terms accepted: {{terms}}</p>
-        <p> Names checked: {{names}} </p>
+        <!-- <p> Names checked: {{names}} </p> -->
 
 
 </template>
@@ -50,7 +54,7 @@ export default {
             password: '',
             role: 'Web Developer',
             terms: false,
-            names: [],
+            // names: [],
         }
     }
 
