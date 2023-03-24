@@ -1,6 +1,6 @@
 <template>
 
-        <form>
+        <form @submit.prevent="handleSubmit">
             <label>Email:</label>
             <input type="email"  v-model="email" required placeholder="Enter your email">
 
@@ -95,6 +95,10 @@ export default {
             this.skills = this.skills.filter((item) => {
                 return skill !== item
             } )
+        },
+
+        handleSubmit() {
+            console.log('form submitted')
         }
     }
 
@@ -160,6 +164,7 @@ export default {
     border-radius: 20px;
     width: 100%;
     height: 46px;
+    cursor: pointer;
   }
   .submit {
     text-align: center;
