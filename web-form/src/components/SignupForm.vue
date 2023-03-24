@@ -28,6 +28,13 @@
                 <label>Accept terms and conditions</label>
             </div>
 
+            <!-- Submit button -->
+            <div class="submit">
+                <button>
+                    Create an Account
+                </button>
+            </div>
+
             <!-- example of using multiple same v-model  -->
 
                 <!-- <div>
@@ -143,4 +150,19 @@ export default {
     color: #777;
     cursor: pointer;
   }
+
+  button {
+    background: #0b6dff;
+    border: 0;
+    padding: 10px 20px;
+    margin-top: 20px;
+    color: white;
+    border-radius: 20px;
+    width: 100%;
+    height: 46px;
+  }
+  .submit {
+    text-align: center;
+  }
+  
 </style>
