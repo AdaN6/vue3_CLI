@@ -2,14 +2,22 @@
 
         <form>
             <label>Email:</label>
-            <input type="email"  v-model="email" required>
+            <input type="email"  v-model="email" required placeholder="Enter your email">
 
             <label>Password:</label>
             <input type="password" v-model="password" required >
+
+            <label>Role:</label>
+            <select v-model="role">
+                <option value="Web Developer">Web Developer</option>
+                <option value="Web Designer">Web Designer</option>
+            </select>
+
         </form>
 
         <p> email: {{email}} </p>
         <p> password: {{password}} </p>
+        <p>role: {{role}} </p>
 
 
 </template>
@@ -20,6 +28,7 @@ export default {
         return {
             email: '',
             password: '',
+            role: 'Web Developer',
         }
     }
 
