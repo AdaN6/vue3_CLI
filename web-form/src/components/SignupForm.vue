@@ -17,7 +17,7 @@
             <label>Skills:</label>
             <input type="text" v-model="tempSkill" @keyup="addSkill">
             <div v-for="skill in skills" :key="skill" class="pill">
-                {{ skill }}
+                {{ skill.replace(',', '') }}
             </div>
 
             <!-- checkbox -->
@@ -70,10 +70,12 @@ export default {
 
     methods: {
         addSkill(e) {
+
             if(e.key === ',' && this.tempSkill) {
                 if (!this.skills.includes(this.tempSkill)){
                     this.skills.push(this.tempSkill)
                 }
+        
                 this.tempSkill = ''
             }
         }
