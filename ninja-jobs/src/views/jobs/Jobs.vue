@@ -3,7 +3,11 @@
   <h1>Jobs</h1>
  
   <div v-for="job in jobs" :key="job.id">
-    <h2>{{ job.title }}</h2>
+    <!-- use data bind so can use the object -->
+    <router-link :to=" { name: 'JobDetails', params: { id: job.id} }">
+      <h2>{{ job.title }}</h2>
+
+    </router-link>
   </div>
   
 </template>
@@ -14,8 +18,8 @@ export default {
         return{
             jobs: [
                 {title: 'UX Designer', id: 1, details: 'lorem'},
-                {title: 'Web Developer', id: 1, details: 'lorem'},
-                {title: 'Vue Developer', id: 1, details: 'lorem'},
+                {title: 'Web Developer', id: 2, details: 'lorem'},
+                {title: 'Vue Developer', id: 3, details: 'lorem'},
             ]
         }
     }

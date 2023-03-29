@@ -1,16 +1,20 @@
 <template>
-    <h1>Job Title</h1>
+    <h1>Jobs title </h1>
     <p> The Job is {{ id }} </p>
 </template>
 
 <script>
 export default {
 
-    data() {
-        return {
-            id: this.$route.params.id
-        }
-    }
+    props: ['id'],
+
+
+    // data() {
+    //     return {
+    //         title: this.title,
+    //         id: this.$route.params.id
+    //     }
+    // }
 
 }
 </script>
