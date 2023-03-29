@@ -1,19 +1,18 @@
 # ninja-jobs
 
-## Project setup
-```
-npm install
-```
+----------------------------------------
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+# install json server
+````
+npm install json-server
+````
 
-### Compiles and minifies for production
-```
-npm run build
-```
+if older verson of node like 5
+````
+npm install json-server --save 
+````
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# how to watch a file
+````
+ npx json-server --watch data/db.json
+ ````
