@@ -12,7 +12,7 @@ if older verson of node like 5
 npm install json-server --save 
 ````
 
-# how to watch a file
+# how to watch a json file
 ````
  npx json-server --watch data/db.json
  ````
