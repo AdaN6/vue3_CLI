@@ -2,12 +2,15 @@
 <template>
   <h1>Jobs</h1>
  
-  <div v-for="job in jobs" :key="job.id" class="job">
+  <div v-for="job in jobs" :key="job.id" class="job" v-if="jobs.length">
     <!-- use data bind so can use the object -->
     <router-link :to=" { name: 'JobDetails', params: { id: job.id} }">
       <h2>{{ job.title }}</h2>
 
     </router-link>
+  </div>
+  <div v-else>
+    <p>Loading jobs ... </p>
   </div>
   
 </template>
