@@ -1,19 +1,17 @@
 # dojo-blog-2
 
-## Project setup
+
+### json server
+install
 ```
-npm install
+npm i
+nstall json
+-server
 ```
 
-### Compiles and hot-reloads for development
+watch 
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+npx json-server --watch data/db.json
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
