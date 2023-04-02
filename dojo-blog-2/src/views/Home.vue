@@ -8,7 +8,10 @@
     <div v-if="error">
       <h1>{{ error }}</h1>
     </div>
-    <PostList2 v-if="showPosts" :postsVTwo="posts2" />
+    <div v-if="posts2.length">
+      <PostList2 v-if="showPosts" :postsVTwo="posts2" />
+    </div>
+    <div v-else> loading ... </div>
 </div>
 </template>
 
