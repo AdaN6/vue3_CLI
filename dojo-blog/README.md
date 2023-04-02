@@ -1,19 +1,8 @@
-# dojo-blog
+# Simple Composition API
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+The composition API
+- template ref in setup function
+- ref - reactive value
+- reactive
+- compouted properties in setup function 
+- watch and watchEffect
