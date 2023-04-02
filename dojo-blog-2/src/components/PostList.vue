@@ -8,13 +8,24 @@
 </template>
 
 <script>
+import { onMounted, onUnmounted, onUpdated } from 'vue'
 import SinglePost from './SinglePost.vue'
 
 export default {
   props: ['posts'],
   components: { SinglePost }, 
   setup(props) {
-    console.log(props.posts)
+  
+    // lifecycle hook in setup function
+    onMounted(() => {
+      console.log('component mounted')
+    })
+    onUnmounted(() => {
+      console.log('component unmouted')
+    })
+    onUpdated(() => {
+      console.log('component updated')
+    })
   }
 }
 </script>
