@@ -2,7 +2,7 @@
     "posts": [
       {
         "id": 1,
-        "title": "welcome to the new blog",
+        "title": "Blog Blog 2",
         "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "tags": [
           "webdev",
@@ -12,7 +12,7 @@
       },
       {
         "id": 2,
-        "title": "top 5 CSS tips",
+        "title": "top 5 HTML tips",
         "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "tags": [
           "css",
