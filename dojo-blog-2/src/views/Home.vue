@@ -5,6 +5,9 @@
     <button @click="showPosts = !showPosts">toggle posts</button>
     <button @click="posts.pop()">Delete a post</button>
     <hr/>
+    <div v-if="error">
+      <h1>{{ error }}</h1>
+    </div>
     <PostList2 v-if="showPosts" :postsVTwo="posts2" />
 </div>
 </template>
@@ -44,7 +47,7 @@ export default {
   
   const showPosts = ref(true)
 
-    return { posts, posts2, showPosts}
+    return { posts, posts2, showPosts, error}
   },
 }
 </script>
