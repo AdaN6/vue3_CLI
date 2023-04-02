@@ -8,13 +8,21 @@
     <button @click="handleClick">Click</button>
     <input type="text" v-model="name">
     <button @click="age++">Increase Age</button>
+    <!-- info2 -->
+    <h2>info2</h2>
+    <p>info2 name: {{ info2.name }} - info2 age: {{ info2.age }}</p>
+    <button @click="updateInfo2">Update info2</button>
+    <!-- reactive  -->
+    <h2>Reactive</h2>
+    <p>{{ r2.name }} - {{ r2.age }}</p>
+    <button @click="updateR2">Increase Age</button>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 
 export default {
   name: 'Home',
@@ -36,6 +44,10 @@ setup() {
   const name = ref('mario')
   const age = ref(30)
 
+  const info2 = ref({name: 'Fleur', age: 33})
+  // --> reactive
+  const r2 = reactive({name: 'Mike', age: 37})
+
 
  // create function
  const handleClick = () => {
@@ -48,8 +60,17 @@ setup() {
   age.value = 40
  }
 
- return {name, age, handleClick}
-},
+// --> info 2
+ const updateInfo2 = () => {
+  info2.value.age = 34
+ }
+
+// --> Reactive
+const updateR2 = () => {
+  r2.age= r2.age + 1
+ }
+ return {name, age, handleClick, info2, updateInfo2, r2, updateR2}
+}
 
 }
 </script>
