@@ -36,7 +36,7 @@
 <script>
 // @ is an alias to /src
 
-import { ref, reactive, computed } from 'vue'
+import { ref, reactive, computed, watch, watchEffect } from 'vue'
 
 export default {
   name: 'Home',
@@ -94,6 +94,16 @@ const youTubers = ref(['Fleur de force', 'Thatcher Joe', 'Zoe Sugg', 'Tati', 'Ja
 
 const matchingYouTubers = computed(() => {
   return youTubers.value.filter((name) => name.includes(search.value))
+})
+
+// ---> watch hook
+watch(search, () => {
+  console.log('watch function run')
+})
+
+// watch effect always run initially 
+watchEffect(() => {
+  console.log('watchEffect function run', search.value)
 })
 
  return {name, age, handleClick, info2, updateInfo2, r2, updateR2, title, search, youTubers, matchingYouTubers}
