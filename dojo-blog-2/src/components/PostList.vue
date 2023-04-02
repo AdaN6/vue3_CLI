@@ -26,7 +26,11 @@ export default {
     onUpdated(() => {
       console.log('component updated')
     })
-  }
+  },
+  // --> mounted that use outside of setup function
+  // mounted() {
+  //   console.log('mounted using options api')
+  // }
 }
 </script>
 
