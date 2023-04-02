@@ -16,13 +16,27 @@
     <h2>Reactive</h2>
     <p>{{ r2.name }} - {{ r2.age }}</p>
     <button @click="updateR2">Increase Age</button>
-  </div>
+    <!-- computed -->
+    <h1>Computed</h1>
+    <p>{{ title }}</p>
+    <h2>Computed 2 - The oldie YouTubers</h2>
+    <h2> list of youtubers: </h2>
+    <div v-for="youTuber in youTubers" :key="youTuber">
+        <p> {{ youTuber }} </p>
+    </div>
+    <h2>Search for particular YouTuber(s)</h2>
+    <input type="text" v-model="search">
+    <p>search term: {{ search }}</p>
+    <div v-for="youTuberFilter in matchingYouTubers" :key="youTuberFilter">
+        <p> {{ youTuberFilter }} </p>
+    </div>
+    </div>
 </template>
 
 <script>
 // @ is an alias to /src
 
-import { ref, reactive } from 'vue'
+import { ref, reactive, computed } from 'vue'
 
 export default {
   name: 'Home',
@@ -69,7 +83,20 @@ setup() {
 const updateR2 = () => {
   r2.age= r2.age + 1
  }
- return {name, age, handleClick, info2, updateInfo2, r2, updateR2}
+
+// --> computed
+const title = computed(() => {
+  return 'shaun'
+})
+
+const search = ref('')
+const youTubers = ref(['Fleur de force', 'Thatcher Joe', 'Zoe Sugg', 'Tati', 'Jamie and Megan', 'Casper Lee'])
+
+const matchingYouTubers = computed(() => {
+  return youTubers.value.filter((name) => name.includes(search.value))
+})
+
+ return {name, age, handleClick, info2, updateInfo2, r2, updateR2, title, search, youTubers, matchingYouTubers}
 }
 
 }
