@@ -30,6 +30,8 @@
     <div v-for="youTuberFilter in matchingYouTubers" :key="youTuberFilter">
         <p> {{ youTuberFilter }} </p>
     </div>
+    <!-- stop watch & watchEffect -->
+    <button @click="stopClick">Stop Watching</button>
     </div>
 </template>
 
@@ -97,16 +99,22 @@ const matchingYouTubers = computed(() => {
 })
 
 // ---> watch hook
-watch(search, () => {
+const stopWatch = watch(search, () => {
   console.log('watch function run')
 })
 
 // watch effect always run initially 
-watchEffect(() => {
+const stopWatchEffect = watchEffect(() => {
   console.log('watchEffect function run', search.value)
 })
 
- return {name, age, handleClick, info2, updateInfo2, r2, updateR2, title, search, youTubers, matchingYouTubers}
+const stopClick = () => {
+  stopWatch()
+  stopWatchEffect()
+}
+
+
+ return {name, age, handleClick, info2, updateInfo2, r2, updateR2, title, search, youTubers, matchingYouTubers, stopClick}
 }
 
 }
