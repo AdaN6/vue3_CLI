@@ -2,6 +2,9 @@
     <div class="post">
       <h3>{{ post2.title }}</h3>
       <p>{{ snippet }}</p>
+      <span v-for="tag in post2.tags" :key="tag">
+        #{{ tag }}
+      </span>
     </div>
   </template>
   
