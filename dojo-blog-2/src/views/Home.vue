@@ -16,9 +16,11 @@
 </template>
 
 <script>
-import { ref } from 'vue'
 import PostList from '../components/PostList.vue'
 import PostList2 from '../components/PostList2.vue'
+import getPosts from '../composables/getPosts'
+import { ref } from 'vue'
+
 
 export default {
   name: 'Home',
@@ -29,27 +31,12 @@ export default {
       { title: 'top 5 CSS tips', body: 'lorem ipsum', id: 2 },
     ]) 
 
-    const posts2 = ref([])
-    const error = ref(null)
+    const showPosts = ref(true)
+    
+   const {posts2, error, load} = getPosts()
 
-    const load = async () => {
-      try{
-        let data = await fetch('http://localhost:3000/posts')
-        console.log(data)
-        if (!data.ok) {
-          throw Error('no data available')
-        }
-        posts2.value = await data.json()
-      } catch(err){
-        error.value = err.message
-        console.log(error.value)
-      }
-    }
-
-    load()
+   load()
   
-  const showPosts = ref(true)
-
     return { posts, posts2, showPosts, error}
   },
 }
