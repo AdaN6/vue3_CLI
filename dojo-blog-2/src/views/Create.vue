@@ -6,7 +6,13 @@
         <label>Content: </label>
         <textarea required v-model="body"></textarea>
         <label>Tags (hit enter to add a tag)</label>
-        <input type="text" v-model="tag">
+        <input 
+            type="text" 
+            v-model="tag"
+            @keydown.enter.prevent="handleKeyDown">
+        <div v-for="tag in tags" :key="tag" class="pill">
+            #{{ tag }}
+        </div>
         <button>Add Post</button>
     </form>
   </div>
@@ -22,7 +28,16 @@ export default {
         const tag = ref('')
         const tags = ref([])
 
-        return { title, body, tag, tags}
+        const handleKeyDown = () => {
+            if(!tags.value.includes(tag.value)){
+                //  /\s/ remove whitespace
+                tag.value = tag.value.replace(/\s/) 
+                tags.value.push(tag.value)
+            }
+            tag.value=''
+        }
+
+        return { title, body, tag, tags, handleKeyDown}
     }
 
 }
@@ -75,6 +90,17 @@ export default {
         font-size: 18px;
         border-radius: 6px;
     }
+
+    .pill {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    color: #ffffff;
+    background: #bb037b;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+  }
 
     
 
