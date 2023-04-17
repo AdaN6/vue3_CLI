@@ -27,9 +27,9 @@
   }
   </script>
   
-  <style>
+<style>
 
-.post {
+  .post {
     margin: 0 40px 30px;
     padding-bottom: 30px;
     border-bottom: 1px dashed #e7e7e7;
@@ -54,5 +54,19 @@
     left: -30px;
     transform: rotateZ(-1deg);
   }
+
+  .post span{
+    padding-right: 20px;
+  }
+
+  .post a.router-link-active {
+        color: #ff8800;
+        font-weight: bold;
+    }
+  
+  .post a {
+        color: #666;
+        text-decoration: none;
+    }
   
   </style>
