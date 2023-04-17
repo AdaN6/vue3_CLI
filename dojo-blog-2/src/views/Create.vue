@@ -55,7 +55,8 @@ export default {
                 body: JSON.stringify(post)
             })
             
-            router.push('/')
+            // router.push('/')
+            router.push({name: 'Home'})
 
 
         }
