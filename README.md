@@ -1,7 +1,7 @@
 # vue3_CLI
 
 # Basuc vue 
-- Web-form (option API)
+- Web-form (options API)
 
 # Basic router learning
 - ninja-jobs
