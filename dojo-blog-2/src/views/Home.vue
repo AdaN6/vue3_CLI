@@ -8,7 +8,7 @@
     <div v-if="error">
       <h1>{{ error }}</h1>
     </div>
-    <div v-if="posts2.length">
+    <div v-if="posts2.length" class="layout">
       <PostList2 v-if="showPosts" :postsVTwo="posts2" />
       <TagCloud :posts2="posts2"/>
     </div>
@@ -56,4 +56,12 @@ export default {
   padding: 10px;
 
  }
+
+ .layout {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px
+ }
+
+
 </style>

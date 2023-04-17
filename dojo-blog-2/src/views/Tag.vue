@@ -1,7 +1,7 @@
 <template>
   <div class="tag">
     <div v-if="error">{{ error }}</div>
-    <div v-if="posts2.length">
+    <div v-if="posts2.length" class="layout">
       <PostList2 :postsVTwo="postWithTag"/>
       <TagCloud :posts2="posts2" />
     </div>
