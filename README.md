@@ -1,6 +1,7 @@
 # vue3_CLI
 
-# Basuc vue 
+# Basic vue 
+- Modal Proejct
 - Web-form (options API)
 
 # Basic router learning
