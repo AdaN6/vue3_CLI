@@ -3,6 +3,7 @@
     <div v-if="error">{{ error }}</div>
     <div v-if="posts2.length">
       <PostList2 :postsVTwo="postWithTag"/>
+      <TagCloud :posts2="posts2" />
     </div>
     <div v-else>
       <Spinner />
@@ -14,11 +15,12 @@
 import Spinner from '@/components/Spinner.vue';
 import PostList2 from '@/components/PostList2.vue';
 import getPosts from '@/composables/getPosts';
+import TagCloud from '@/components/TagCloud.vue';
 import { useRoute } from 'vue-router';
 import { computed } from 'vue'
 
 export default {
-  components: { PostList2, Spinner},
+  components: { PostList2, Spinner, TagCloud},
   setup() {
     const route = useRoute()
     const { posts2, error, load} = getPosts()
