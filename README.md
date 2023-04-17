@@ -8,5 +8,5 @@
 - ninja-jobs
 
 # Composition API projects (similar concept to react hook)
-- dojo-blog
-- dojo-blog2
+- dojo-blog (simple basic composition API)
+- dojo-blog2 (with async code and composables)
