@@ -8,12 +8,17 @@ const getPost = (id) => {
 
     const load = async () => {
         try{
-            await new Promise(resolve => {
-                setTimeout(resolve, 2000)
-            })
+            // await new Promise(resolve => {
+            //     setTimeout(resolve, 2000)
+            // })
 
             let res = await projectFirestore.collection('posts').doc(id).get()
             // console.log(res.data)
+
+            if(!res.exists) {
+                throw Error('This post does not exist ')
+            }
+
             post.value = { ...res.data(), id: res.id}
             console.log(post.value)
 
