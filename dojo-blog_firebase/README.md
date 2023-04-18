@@ -13,5 +13,10 @@ watch
 ```
 npx json-server --watch data/db.json
 ```
+### Firebase
 
+install firebase
+````
+npm install firebase
+````
 
