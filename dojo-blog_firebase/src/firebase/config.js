@@ -1,5 +1,10 @@
-import firebase from '/firebase/app'
-import 'firebase/firestore'
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
+
+// import { FirebaseApp, initializeApp } from "firebase/app";
+// import { getAuth } from "firebase/auth";
+// import { getDatabase } from "firebase/database";
+
 
 
 const firebaseConfig = {
@@ -14,6 +19,11 @@ const firebaseConfig = {
 //   init firebase
 
 firebase.initializeApp(firebaseConfig)
+// const app: FirebaseApp = initializeApp(firebaseConfig);
+
+// const db = getDatabase(app);
+
+// const auth = getAuth(app);
 
 // initialise firestore service
 const projectFirestore = firebase.firestore()
