@@ -9,6 +9,13 @@ const getPosts = () => {
         try{
             const res = await projectFirestore.collection('posts').get()           
             // console.log(res.docs)
+
+            posts.value = res.docs.map(doc => {
+                // console.log(doc.data())
+
+                // as the id is on the data not in the data and we needed the document id. ...doc.data() = grab all the properties into "doc.data()" object. and then add 2nd property to include the id
+                return { ...doc.data(), id: doc.id}
+            })
             
         } catch(err){
             error.value = err.message
