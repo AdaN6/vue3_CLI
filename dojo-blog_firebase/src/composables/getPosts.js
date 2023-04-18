@@ -7,6 +7,11 @@ const getPosts = () => {
 
     const load = async () => {
         try{
+
+            await new Promise(resolve => {
+                setTimeout(resolve, 1000)
+            })
+            
             const res = await projectFirestore.collection('posts').get()           
             // console.log(res.docs)
 
