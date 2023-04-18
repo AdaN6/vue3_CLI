@@ -111,6 +111,7 @@ export default {
         padding: 8px 16px;
         font-size: 18px;
         border-radius: 6px;
+        cursor: pointer;
     }
 
     .pill {
