@@ -1,0 +1,51 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Blog Blog 2",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "tags": [
+        "webdev",
+        "coding",
+        "news"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "top 5 HTML tips",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "tags": [
+        "css",
+        "webdev",
+        "coding"
+      ]
+    },
+    {
+      "title": "Post 3",
+      "body": "post post post",
+      "tags": [
+        "test1",
+        "testundefined2",
+        "testest"
+      ],
+      "id": 3
+    },
+    {
+      "title": "Post 4",
+      "body": "another day another post",
+      "tags": [
+        "post4"
+      ],
+      "id": 4
+    },
+    {
+      "title": "Happy Tuesday",
+      "body": "Love Happy Tuesday, money money money",
+      "tags": [
+        "money",
+        "news"
+      ],
+      "id": 5
+    }
+  ]
+}
