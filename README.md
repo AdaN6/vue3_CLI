@@ -22,7 +22,7 @@
 
 # Firebase projects 
 - dojo-blog_firebase (with composition API)
-- firebase config
-- fetching datas from firebase
-- showing posts with the descending order of timestamp
-- live data automatic update on the homepage
+    - firebase config
+    - fetching datas from firebase
+    - showing posts with the descending order of timestamp
+    - live data automatic update on the homepage
