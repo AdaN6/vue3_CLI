@@ -1,2 +1,3 @@
 - vue form
-- practice error handling for the form submission 
+- practice error handling for the form submission
+- ```npm run serve```
